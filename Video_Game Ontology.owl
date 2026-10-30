@@ -1,0 +1,282 @@
+Prefix: dc: <http://purl.org/dc/elements/1.1/>
+Prefix: owl: <http://www.w3.org/2002/07/owl#>
+Prefix: rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+Prefix: rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+Prefix: xml: <http://www.w3.org/XML/1998/namespace>
+Prefix: xsd: <http://www.w3.org/2001/XMLSchema#>
+
+
+
+Ontology: <http://cgi.csc.liv.ac.uk/~frank/teaching/comp08/videogame.owl>
+
+
+ObjectProperty: <http://cgi.csc.liv.ac.uk/~frank/teaching/comp08/videogame.owl#hasDifficulty>
+
+    Characteristics: 
+        Functional
+    
+    Domain: 
+        <http://cgi.csc.liv.ac.uk/~frank/teaching/comp08/videogame.owl#Game>
+    
+    Range: 
+        <http://cgi.csc.liv.ac.uk/~frank/teaching/comp08/videogame.owl#DifficultyValuePartition>
+    
+    
+ObjectProperty: <http://cgi.csc.liv.ac.uk/~frank/teaching/comp08/videogame.owl#hasGenre>
+
+    Domain: 
+        <http://cgi.csc.liv.ac.uk/~frank/teaching/comp08/videogame.owl#Game>
+    
+    Range: 
+        <http://cgi.csc.liv.ac.uk/~frank/teaching/comp08/videogame.owl#Genre>
+    
+    
+ObjectProperty: <http://cgi.csc.liv.ac.uk/~frank/teaching/comp08/videogame.owl#hasPlatform>
+
+    Domain: 
+        <http://cgi.csc.liv.ac.uk/~frank/teaching/comp08/videogame.owl#Game>
+    
+    Range: 
+        <http://cgi.csc.liv.ac.uk/~frank/teaching/comp08/videogame.owl#Platform>
+    
+    
+Class: <http://cgi.csc.liv.ac.uk/~frank/teaching/comp08/videogame.owl#Chess>
+
+    SubClassOf: 
+        <http://cgi.csc.liv.ac.uk/~frank/teaching/comp08/videogame.owl#NamedGame>,
+        <http://cgi.csc.liv.ac.uk/~frank/teaching/comp08/videogame.owl#hasDifficulty> some <http://cgi.csc.liv.ac.uk/~frank/teaching/comp08/videogame.owl#Normal>,
+        <http://cgi.csc.liv.ac.uk/~frank/teaching/comp08/videogame.owl#hasGenre> some <http://cgi.csc.liv.ac.uk/~frank/teaching/comp08/videogame.owl#MultiPlayer>,
+        <http://cgi.csc.liv.ac.uk/~frank/teaching/comp08/videogame.owl#hasGenre> some <http://cgi.csc.liv.ac.uk/~frank/teaching/comp08/videogame.owl#SinglePlayer>,
+        <http://cgi.csc.liv.ac.uk/~frank/teaching/comp08/videogame.owl#hasPlatform> some <http://cgi.csc.liv.ac.uk/~frank/teaching/comp08/videogame.owl#LinuxPlatform>,
+        <http://cgi.csc.liv.ac.uk/~frank/teaching/comp08/videogame.owl#hasPlatform> some <http://cgi.csc.liv.ac.uk/~frank/teaching/comp08/videogame.owl#MacOSXPlatform>,
+        <http://cgi.csc.liv.ac.uk/~frank/teaching/comp08/videogame.owl#hasPlatform> some <http://cgi.csc.liv.ac.uk/~frank/teaching/comp08/videogame.owl#WindowsPlatform>
+    
+    
+Class: <http://cgi.csc.liv.ac.uk/~frank/teaching/comp08/videogame.owl#DifficultyValuePartition>
+
+    EquivalentTo: 
+        <http://cgi.csc.liv.ac.uk/~frank/teaching/comp08/videogame.owl#Easy> or <http://cgi.csc.liv.ac.uk/~frank/teaching/comp08/videogame.owl#Hard> or <http://cgi.csc.liv.ac.uk/~frank/teaching/comp08/videogame.owl#Normal>
+    
+    SubClassOf: 
+        <http://cgi.csc.liv.ac.uk/~frank/teaching/comp08/videogame.owl#ValuePartition>
+    
+    
+Class: <http://cgi.csc.liv.ac.uk/~frank/teaching/comp08/videogame.owl#Easy>
+
+    SubClassOf: 
+        <http://cgi.csc.liv.ac.uk/~frank/teaching/comp08/videogame.owl#DifficultyValuePartition>
+    
+    
+Class: <http://cgi.csc.liv.ac.uk/~frank/teaching/comp08/videogame.owl#EasyGame>
+
+    EquivalentTo: 
+        <http://cgi.csc.liv.ac.uk/~frank/teaching/comp08/videogame.owl#Game>
+         and (<http://cgi.csc.liv.ac.uk/~frank/teaching/comp08/videogame.owl#hasDifficulty> some <http://cgi.csc.liv.ac.uk/~frank/teaching/comp08/videogame.owl#Easy>)
+    
+    
+Class: <http://cgi.csc.liv.ac.uk/~frank/teaching/comp08/videogame.owl#Game>
+
+    SubClassOf: 
+        owl:Thing
+    
+    
+Class: <http://cgi.csc.liv.ac.uk/~frank/teaching/comp08/videogame.owl#Genre>
+
+    SubClassOf: 
+        owl:Thing
+    
+    
+Class: <http://cgi.csc.liv.ac.uk/~frank/teaching/comp08/videogame.owl#Hard>
+
+    SubClassOf: 
+        <http://cgi.csc.liv.ac.uk/~frank/teaching/comp08/videogame.owl#DifficultyValuePartition>
+    
+    
+Class: <http://cgi.csc.liv.ac.uk/~frank/teaching/comp08/videogame.owl#HardGame>
+
+    EquivalentTo: 
+        <http://cgi.csc.liv.ac.uk/~frank/teaching/comp08/videogame.owl#Game>
+         and (<http://cgi.csc.liv.ac.uk/~frank/teaching/comp08/videogame.owl#hasDifficulty> some <http://cgi.csc.liv.ac.uk/~frank/teaching/comp08/videogame.owl#Hard>)
+    
+    
+Class: <http://cgi.csc.liv.ac.uk/~frank/teaching/comp08/videogame.owl#LeagueOfLegends>
+
+    SubClassOf: 
+        <http://cgi.csc.liv.ac.uk/~frank/teaching/comp08/videogame.owl#NamedGame>,
+        <http://cgi.csc.liv.ac.uk/~frank/teaching/comp08/videogame.owl#hasDifficulty> some <http://cgi.csc.liv.ac.uk/~frank/teaching/comp08/videogame.owl#Hard>,
+        <http://cgi.csc.liv.ac.uk/~frank/teaching/comp08/videogame.owl#hasGenre> some <http://cgi.csc.liv.ac.uk/~frank/teaching/comp08/videogame.owl#MultiPlayer>,
+        <http://cgi.csc.liv.ac.uk/~frank/teaching/comp08/videogame.owl#hasGenre> some <http://cgi.csc.liv.ac.uk/~frank/teaching/comp08/videogame.owl#Online>,
+        <http://cgi.csc.liv.ac.uk/~frank/teaching/comp08/videogame.owl#hasPlatform> some <http://cgi.csc.liv.ac.uk/~frank/teaching/comp08/videogame.owl#MacOSXPlatform>,
+        <http://cgi.csc.liv.ac.uk/~frank/teaching/comp08/videogame.owl#hasPlatform> some <http://cgi.csc.liv.ac.uk/~frank/teaching/comp08/videogame.owl#WindowsPlatform>
+    
+    
+Class: <http://cgi.csc.liv.ac.uk/~frank/teaching/comp08/videogame.owl#LinuxGame>
+
+    EquivalentTo: 
+        <http://cgi.csc.liv.ac.uk/~frank/teaching/comp08/videogame.owl#Game>
+         and (<http://cgi.csc.liv.ac.uk/~frank/teaching/comp08/videogame.owl#hasPlatform> some <http://cgi.csc.liv.ac.uk/~frank/teaching/comp08/videogame.owl#LinuxPlatform>)
+    
+    
+Class: <http://cgi.csc.liv.ac.uk/~frank/teaching/comp08/videogame.owl#LinuxPlatform>
+
+    SubClassOf: 
+        <http://cgi.csc.liv.ac.uk/~frank/teaching/comp08/videogame.owl#Platform>
+    
+    
+Class: <http://cgi.csc.liv.ac.uk/~frank/teaching/comp08/videogame.owl#MacOSXGame>
+
+    EquivalentTo: 
+        <http://cgi.csc.liv.ac.uk/~frank/teaching/comp08/videogame.owl#Game>
+         and (<http://cgi.csc.liv.ac.uk/~frank/teaching/comp08/videogame.owl#hasPlatform> some <http://cgi.csc.liv.ac.uk/~frank/teaching/comp08/videogame.owl#MacOSXPlatform>)
+    
+    
+Class: <http://cgi.csc.liv.ac.uk/~frank/teaching/comp08/videogame.owl#MacOSXPlatform>
+
+    SubClassOf: 
+        <http://cgi.csc.liv.ac.uk/~frank/teaching/comp08/videogame.owl#Platform>
+    
+    
+Class: <http://cgi.csc.liv.ac.uk/~frank/teaching/comp08/videogame.owl#MultiPlatformGame>
+
+    EquivalentTo: 
+        <http://cgi.csc.liv.ac.uk/~frank/teaching/comp08/videogame.owl#Game>
+         and (<http://cgi.csc.liv.ac.uk/~frank/teaching/comp08/videogame.owl#hasPlatform> some <http://cgi.csc.liv.ac.uk/~frank/teaching/comp08/videogame.owl#LinuxPlatform>)
+         and (<http://cgi.csc.liv.ac.uk/~frank/teaching/comp08/videogame.owl#hasPlatform> some <http://cgi.csc.liv.ac.uk/~frank/teaching/comp08/videogame.owl#MacOSXPlatform>)
+         and (<http://cgi.csc.liv.ac.uk/~frank/teaching/comp08/videogame.owl#hasPlatform> some <http://cgi.csc.liv.ac.uk/~frank/teaching/comp08/videogame.owl#WindowsPlatform>)
+    
+    
+Class: <http://cgi.csc.liv.ac.uk/~frank/teaching/comp08/videogame.owl#MultiPlayer>
+
+    SubClassOf: 
+        <http://cgi.csc.liv.ac.uk/~frank/teaching/comp08/videogame.owl#Genre>
+    
+    
+Class: <http://cgi.csc.liv.ac.uk/~frank/teaching/comp08/videogame.owl#MultiPlayerGame>
+
+    EquivalentTo: 
+        <http://cgi.csc.liv.ac.uk/~frank/teaching/comp08/videogame.owl#Game>
+         and (<http://cgi.csc.liv.ac.uk/~frank/teaching/comp08/videogame.owl#hasGenre> some <http://cgi.csc.liv.ac.uk/~frank/teaching/comp08/videogame.owl#MultiPlayer>)
+    
+    
+Class: <http://cgi.csc.liv.ac.uk/~frank/teaching/comp08/videogame.owl#NamedGame>
+
+    SubClassOf: 
+        <http://cgi.csc.liv.ac.uk/~frank/teaching/comp08/videogame.owl#Game>
+    
+    
+Class: <http://cgi.csc.liv.ac.uk/~frank/teaching/comp08/videogame.owl#Normal>
+
+    SubClassOf: 
+        <http://cgi.csc.liv.ac.uk/~frank/teaching/comp08/videogame.owl#DifficultyValuePartition>
+    
+    
+Class: <http://cgi.csc.liv.ac.uk/~frank/teaching/comp08/videogame.owl#NormalGame>
+
+    EquivalentTo: 
+        <http://cgi.csc.liv.ac.uk/~frank/teaching/comp08/videogame.owl#Game>
+         and (<http://cgi.csc.liv.ac.uk/~frank/teaching/comp08/videogame.owl#hasDifficulty> some <http://cgi.csc.liv.ac.uk/~frank/teaching/comp08/videogame.owl#Normal>)
+    
+    
+Class: <http://cgi.csc.liv.ac.uk/~frank/teaching/comp08/videogame.owl#Online>
+
+    SubClassOf: 
+        <http://cgi.csc.liv.ac.uk/~frank/teaching/comp08/videogame.owl#Genre>
+    
+    
+Class: <http://cgi.csc.liv.ac.uk/~frank/teaching/comp08/videogame.owl#OnlineGame>
+
+    EquivalentTo: 
+        <http://cgi.csc.liv.ac.uk/~frank/teaching/comp08/videogame.owl#Game>
+         and (<http://cgi.csc.liv.ac.uk/~frank/teaching/comp08/videogame.owl#hasGenre> some <http://cgi.csc.liv.ac.uk/~frank/teaching/comp08/videogame.owl#Online>)
+    
+    
+Class: <http://cgi.csc.liv.ac.uk/~frank/teaching/comp08/videogame.owl#Platform>
+
+    SubClassOf: 
+        owl:Thing
+    
+    
+Class: <http://cgi.csc.liv.ac.uk/~frank/teaching/comp08/videogame.owl#Puzzle>
+
+    SubClassOf: 
+        <http://cgi.csc.liv.ac.uk/~frank/teaching/comp08/videogame.owl#Genre>
+    
+    
+Class: <http://cgi.csc.liv.ac.uk/~frank/teaching/comp08/videogame.owl#RolePlayGame>
+
+    SubClassOf: 
+        <http://cgi.csc.liv.ac.uk/~frank/teaching/comp08/videogame.owl#Genre>
+    
+    
+Class: <http://cgi.csc.liv.ac.uk/~frank/teaching/comp08/videogame.owl#SinglePlayer>
+
+    SubClassOf: 
+        <http://cgi.csc.liv.ac.uk/~frank/teaching/comp08/videogame.owl#Genre>
+    
+    
+Class: <http://cgi.csc.liv.ac.uk/~frank/teaching/comp08/videogame.owl#SinglePlayerGame>
+
+    EquivalentTo: 
+        <http://cgi.csc.liv.ac.uk/~frank/teaching/comp08/videogame.owl#Game>
+         and (<http://cgi.csc.liv.ac.uk/~frank/teaching/comp08/videogame.owl#hasGenre> some <http://cgi.csc.liv.ac.uk/~frank/teaching/comp08/videogame.owl#SinglePlayer>)
+    
+    
+Class: <http://cgi.csc.liv.ac.uk/~frank/teaching/comp08/videogame.owl#Sudoku>
+
+    SubClassOf: 
+        <http://cgi.csc.liv.ac.uk/~frank/teaching/comp08/videogame.owl#NamedGame>,
+        <http://cgi.csc.liv.ac.uk/~frank/teaching/comp08/videogame.owl#hasDifficulty> some <http://cgi.csc.liv.ac.uk/~frank/teaching/comp08/videogame.owl#Easy>,
+        <http://cgi.csc.liv.ac.uk/~frank/teaching/comp08/videogame.owl#hasGenre> some <http://cgi.csc.liv.ac.uk/~frank/teaching/comp08/videogame.owl#Puzzle>,
+        <http://cgi.csc.liv.ac.uk/~frank/teaching/comp08/videogame.owl#hasGenre> some <http://cgi.csc.liv.ac.uk/~frank/teaching/comp08/videogame.owl#SinglePlayer>,
+        <http://cgi.csc.liv.ac.uk/~frank/teaching/comp08/videogame.owl#hasPlatform> some <http://cgi.csc.liv.ac.uk/~frank/teaching/comp08/videogame.owl#LinuxPlatform>,
+        <http://cgi.csc.liv.ac.uk/~frank/teaching/comp08/videogame.owl#hasPlatform> some <http://cgi.csc.liv.ac.uk/~frank/teaching/comp08/videogame.owl#MacOSXPlatform>,
+        <http://cgi.csc.liv.ac.uk/~frank/teaching/comp08/videogame.owl#hasPlatform> some <http://cgi.csc.liv.ac.uk/~frank/teaching/comp08/videogame.owl#WindowsPlatform>
+    
+    
+Class: <http://cgi.csc.liv.ac.uk/~frank/teaching/comp08/videogame.owl#ValuePartition>
+
+    SubClassOf: 
+        owl:Thing
+    
+    
+Class: <http://cgi.csc.liv.ac.uk/~frank/teaching/comp08/videogame.owl#WindowsGame>
+
+    EquivalentTo: 
+        <http://cgi.csc.liv.ac.uk/~frank/teaching/comp08/videogame.owl#Game>
+         and (<http://cgi.csc.liv.ac.uk/~frank/teaching/comp08/videogame.owl#hasPlatform> some <http://cgi.csc.liv.ac.uk/~frank/teaching/comp08/videogame.owl#WindowsPlatform>)
+    
+    
+Class: <http://cgi.csc.liv.ac.uk/~frank/teaching/comp08/videogame.owl#WindowsPlatform>
+
+    SubClassOf: 
+        <http://cgi.csc.liv.ac.uk/~frank/teaching/comp08/videogame.owl#Platform>
+    
+    
+Class: <http://cgi.csc.liv.ac.uk/~frank/teaching/comp08/videogame.owl#WorldOfWarcraft>
+
+    SubClassOf: 
+        <http://cgi.csc.liv.ac.uk/~frank/teaching/comp08/videogame.owl#NamedGame>,
+        <http://cgi.csc.liv.ac.uk/~frank/teaching/comp08/videogame.owl#hasDifficulty> some <http://cgi.csc.liv.ac.uk/~frank/teaching/comp08/videogame.owl#Normal>,
+        <http://cgi.csc.liv.ac.uk/~frank/teaching/comp08/videogame.owl#hasGenre> some <http://cgi.csc.liv.ac.uk/~frank/teaching/comp08/videogame.owl#MultiPlayer>,
+        <http://cgi.csc.liv.ac.uk/~frank/teaching/comp08/videogame.owl#hasGenre> some <http://cgi.csc.liv.ac.uk/~frank/teaching/comp08/videogame.owl#Online>,
+        <http://cgi.csc.liv.ac.uk/~frank/teaching/comp08/videogame.owl#hasGenre> some <http://cgi.csc.liv.ac.uk/~frank/teaching/comp08/videogame.owl#RolePlayGame>,
+        <http://cgi.csc.liv.ac.uk/~frank/teaching/comp08/videogame.owl#hasPlatform> some <http://cgi.csc.liv.ac.uk/~frank/teaching/comp08/videogame.owl#WindowsPlatform>
+    
+    
+Class: owl:Thing
+
+    
+DisjointClasses: 
+    <http://cgi.csc.liv.ac.uk/~frank/teaching/comp08/videogame.owl#Chess>,<http://cgi.csc.liv.ac.uk/~frank/teaching/comp08/videogame.owl#LeagueOfLegends>,<http://cgi.csc.liv.ac.uk/~frank/teaching/comp08/videogame.owl#Sudoku>,<http://cgi.csc.liv.ac.uk/~frank/teaching/comp08/videogame.owl#WorldOfWarcraft>
+
+DisjointClasses: 
+    <http://cgi.csc.liv.ac.uk/~frank/teaching/comp08/videogame.owl#Easy>,<http://cgi.csc.liv.ac.uk/~frank/teaching/comp08/videogame.owl#Hard>,<http://cgi.csc.liv.ac.uk/~frank/teaching/comp08/videogame.owl#Normal>
+
+DisjointClasses: 
+    <http://cgi.csc.liv.ac.uk/~frank/teaching/comp08/videogame.owl#Game>,<http://cgi.csc.liv.ac.uk/~frank/teaching/comp08/videogame.owl#Genre>,<http://cgi.csc.liv.ac.uk/~frank/teaching/comp08/videogame.owl#Platform>,<http://cgi.csc.liv.ac.uk/~frank/teaching/comp08/videogame.owl#ValuePartition>
+
+DisjointClasses: 
+    <http://cgi.csc.liv.ac.uk/~frank/teaching/comp08/videogame.owl#LinuxPlatform>,<http://cgi.csc.liv.ac.uk/~frank/teaching/comp08/videogame.owl#MacOSXPlatform>,<http://cgi.csc.liv.ac.uk/~frank/teaching/comp08/videogame.owl#WindowsPlatform>
+
+DisjointClasses: 
+    <http://cgi.csc.liv.ac.uk/~frank/teaching/comp08/videogame.owl#MultiPlayer>,<http://cgi.csc.liv.ac.uk/~frank/teaching/comp08/videogame.owl#Online>,<http://cgi.csc.liv.ac.uk/~frank/teaching/comp08/videogame.owl#Puzzle>,<http://cgi.csc.liv.ac.uk/~frank/teaching/comp08/videogame.owl#RolePlayGame>,<http://cgi.csc.liv.ac.uk/~frank/teaching/comp08/videogame.owl#SinglePlayer>
